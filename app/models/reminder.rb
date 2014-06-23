@@ -18,6 +18,6 @@ class Reminder
   end
 
   def scheduled_at
-    posted_at.to_time.to_i - Time.now.to_i
+    notify_at.to_time.to_i - Time.now.to_i
   end
 end
