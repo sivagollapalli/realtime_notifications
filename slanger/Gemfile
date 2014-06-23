@@ -1,0 +1,3 @@
+source 'http://rubygems.org'
+  
+gem 'slanger', git: 'git@github.com:jiren/slanger.git'

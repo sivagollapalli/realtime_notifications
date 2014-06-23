@@ -1,0 +1,7 @@
+:verbose: false
+:pidfile: ./tmp/pids/sidekiq.pid
+:concurrency: 25
+:logfile: ./log/sidekiq.log
+:timeout: 30
+:daemon: true
+  - default
