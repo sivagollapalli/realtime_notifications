@@ -7,9 +7,6 @@ gem 'rails', '3.2.17'
 
 gem 'mongoid', '~> 3.1'
 gem 'sinatra', '>= 1.3.0', :require => nil
-gem 'bootstrap-sass', '~> 3.1.1'
-gem 'momentjs-rails', '~> 2.5.0'
-gem 'bootstrap3-datetimepicker-rails', '~> 3.0.0'
 gem 'pusher'
 gem 'sidekiq'
 
