@@ -1,20 +1,36 @@
 == RealTime Notifications
-
-This is sample repo which guides you how to intergate slanger along with sidekiq to push realtime notifications. To start with please follow steps below:
-
-1. Run slanger server:
-    cd slanger/
-
-    bundle exec slanger --app_key "7438f4a6a0bf514f3a586ba5f888af24" --secret "115e6690ee2bfb24ee006a9cd3395d38"
-
-2. Run Sidekiq Server:
-    bundle exec sidekiq -C config/sidekiq.yml
-
-3. Run rails server:
-    bundle exec rails s
+ This is a ready-to-use demonstration of real time notifications. We set a reminder in minutes for your timezone and get a notification at that the specified time directly in the web page. This demo uses slanger along with sidekiq to push realtime notifications
 
 == Prerequisite to run this application:
 
-1. Mongodb 
+1. Install Mongodb 
+2. Install redis server
+3. Start Mongodb and Redis server.
 
-2. redis server
+Now, to start the demo, please follow steps below:
+
+1. First, set your timezone in `config/application.rb`. This is currently set as 
+
+   ```ruby
+   config.time_zone = 'Mumbai'
+   ```
+
+   Please change this to your current timezone.
+
+2. Start slanger:
+
+    cd slanger/
+    bundle
+    bundle exec slanger --app_key "7438f4a6a0bf514f3a586ba5f888af24" --secret "115e6690ee2bfb24ee006a9cd3395d38"
+
+3. Run rails server:
+
+    bundle
+    bundle exec rails s
+
+4. Run Sidekiq Server:
+
+    bundle exec sidekiq -C config/sidekiq.yml
+
+
+
