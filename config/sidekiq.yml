@@ -4,4 +4,3 @@
 :logfile: ./log/sidekiq.log
 :timeout: 30
 :daemon: true
-  - default
