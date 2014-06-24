@@ -3,6 +3,8 @@
 This is sample repo which guides you how to intergate slanger along with sidekiq to push realtime notifications. To start with please follow steps below:
 
 1. Run slanger server:
+    cd slanger/
+
     bundle exec slanger --app_key "7438f4a6a0bf514f3a586ba5f888af24" --secret "115e6690ee2bfb24ee006a9cd3395d38"
 
 2. Run Sidekiq Server:
