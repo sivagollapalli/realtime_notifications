@@ -43,11 +43,11 @@ class RemindersController < ApplicationController
     reminder = params[:reminder]
     @reminder = Reminder.new
     @reminder.text = reminder[:text]
-    @reminder.notify_at = ActiveSupport::TimeZone['Mumbai'].parse(reminder["notify_at(1i)"] + "-" + reminder["notify_at(2i)"] + "-" + reminder["notify_at(3i)"] + " " + reminder["notify_at(4i)"] + ":" + reminder["notify_at(5i)"])
+    @reminder.notify_at = Time.zone.parse(reminder["notify_at(1i)"] + "-" + reminder["notify_at(2i)"] + "-" + reminder["notify_at(3i)"] + " " + reminder["notify_at(4i)"] + ":" + reminder["notify_at(5i)"])
 
     respond_to do |format|
       if @reminder.save
-        format.html { redirect_to @reminder, notice: 'Reminder was successfully created.' }
+        format.html { redirect_to reminders_path, notice: 'Reminder was successfully created.' }
         format.json { render json: @reminder, status: :created, location: @reminder }
       else
         format.html { render action: "new" }
