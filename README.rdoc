@@ -1,5 +1,6 @@
 == RealTime Notifications
- This is a ready-to-use demonstration of real time notifications. We set a reminder in minutes for your timezone and get a notification at that the specified time directly in the web page. This demo uses slanger along with sidekiq to push realtime notifications
+
+This is a ready-to-use demonstration of real time notifications. We set a reminder in minutes for your timezone and get a notification at that the specified time directly in the web page. This demo uses slanger along with sidekiq to push realtime notifications
 
 == Prerequisite to run this application:
 
@@ -11,9 +12,7 @@ Now, to start the demo, please follow steps below:
 
 1. First, set your timezone in `config/application.rb`. This is currently set as 
 
-   ```ruby
-   config.time_zone = 'Mumbai'
-   ```
+    config.time_zone = 'Mumbai'
 
    Please change this to your current timezone.
 
